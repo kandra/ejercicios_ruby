@@ -4,6 +4,11 @@ color = semaforo[rand(1..3)-1]
 policia =  rand(0..1)
 peatones = rand(0..1)
 
+policia = 0
+peatones = 0
+
+puts "Semaforo: #{color}\nPolicia: #{policia}\nPeatones: #{peatones}"
+
 if peatones == 1
   puts "no puedes pasar porque hay peatones cruzando la calle"
 else
@@ -22,4 +27,11 @@ else
       puts "puedes pasar porque el semáforo está en #{color}"
     end
   end
+end
+
+#Si solo quisiera que me diga "PASA" o "NO PASA"
+if color == :verde && policia == 0 && peatones == 0
+  puts "\nPASA"
+else
+  puts "\nNO PASA"
 end
